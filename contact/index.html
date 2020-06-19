@@ -46,14 +46,28 @@
     <div class="container">
       <h1 class="ui-title-1">Send me a message...</h1>
       <div class="form-container">
-        <form action="javascript: void(0)">
+        <form action="https://formspree.io/xjvaorkb" method="POST">
           <label for="nameField">Name</label>
-          <input id="nameField" type="text" placeholder="John Doe" />
+          <input
+            id="nameField"
+            type="text"
+            placeholder="John Doe"
+            name="name"
+          />
           <label for="emailField">Email</label>
-          <input id="emailField" type="email" placeholder="JohnDoe@email.com" />
+          <input
+            id="emailField"
+            type="email"
+            placeholder="JohnDoe@email.com"
+            name="_replyto"
+          />
 
           <label for="commentField">Message</label>
-          <textarea id="commentField" placeholder="Hi CJ …"></textarea>
+          <textarea
+            id="commentField"
+            placeholder="Hi CJ …"
+            name="message"
+          ></textarea>
           <button type="submit" class="button button-default">Send...</button>
         </form>
       </div>
