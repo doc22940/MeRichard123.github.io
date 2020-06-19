@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300&display=swap");
+.navbar-link {
+  color: gray;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "MuseoModerno", cursive;
+}
+.About-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .button {
+    margin-top: 20px;
+  }
+  p {
+    width: 50%;
+    line-height: 2rem;
+    padding: 0.5rem;
+  }
+}
+.LandingImage {
+  margin: 2.5rem;
+  img {
+    max-height: 100%;
+
+    object-fit: cover;
+  }
+}
+
+footer {
+  background: #eeee;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  p {
+    margin-bottom: 15px;
+  }
+
+  li {
+    padding: 0.5rem;
+    transition: all 250ms ease;
+    border-radius: 2px;
+  }
+  li:hover,
+  li:focus {
+    box-shadow: 2px 2px 2px 2px rgba($color: #000000, $alpha: 0.4);
+  }
+
+  ul {
+    padding: 1.5rem;
+    display: flex;
+  }
+}
+textarea {
+  height: 200px;
+}
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+.button {
+  border-radius: 10px;
+}
+input:focus,
+textarea:focus {
+  border: cornflowerblue 2px solid;
+}
+
+@media screen and (max-width: 700px) {
+  .About-container p {
+    width: 95%;
+  }
+}

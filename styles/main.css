@@ -1,1 +1,116 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300&display=swap");
+.navbar-link {
+  color: gray;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "MuseoModerno", cursive;
+}
+
+.About-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.About-container .button {
+  margin-top: 20px;
+}
+
+.About-container p {
+  width: 50%;
+  line-height: 2rem;
+  padding: 0.5rem;
+}
+
+.LandingImage {
+  margin: 2.5rem;
+}
+
+.LandingImage img {
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+footer {
+  background: #eeee;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 50px;
+}
+
+footer p {
+  margin-bottom: 15px;
+}
+
+footer li {
+  padding: 0.5rem;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  border-radius: 2px;
+}
+
+footer li:hover,
+footer li:focus {
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+footer ul {
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+textarea {
+  height: 200px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button {
+  border-radius: 10px;
+}
+
+input:focus,
+textarea:focus {
+  border: cornflowerblue 2px solid;
+}
+
+@media screen and (max-width: 700px) {
+  .About-container p {
+    width: 95%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
