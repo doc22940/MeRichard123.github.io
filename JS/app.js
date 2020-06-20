@@ -19,7 +19,8 @@ checkboxContainer.forEach((checkbox, index) => {
   });
 });
 
-function createBlog(params) {
+// Create Blog cards
+const createBlog = (params) => {
   // Stop the loader
   loader.innerHTML = "";
   // Create Outer link
@@ -69,10 +70,11 @@ function createBlog(params) {
 
   // Add to Document
   blogContainer.appendChild(blog);
-}
+};
 
 // Get data from the API
-async function getBlogPosts() {
+
+const getBlogPosts = async () => {
   try {
     const response = await fetch(
       "https://dev.to/api/articles?username=merichard123"
@@ -99,7 +101,7 @@ async function getBlogPosts() {
     // Display an error if something goes wrong.
     loader.innerHTML = "Something went wrong couldn't load posts...";
   }
-}
+};
 getBlogPosts();
 
 // Using the Fetch API equivalent
