@@ -10,7 +10,9 @@ checkboxContainer.forEach((checkbox, index) => {
     if (e.target.checked) {
       // Get todays date
       let today = new Date();
-      let date = `${today.getDate()}/${today.getMonth()}/${today.getFullYear()}`;
+      // Note: JS Date object months start at 0 so its 0-11 so we add 1
+      let month = today.getMonth() + 1;
+      let date = `${today.getDate()}/${month}/${today.getFullYear()}`;
       // Add the date one the clicked item
       const listItem = checkboxContainer.item(index);
       // I am using .item(index) because querySelectorAll returns a node list
