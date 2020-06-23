@@ -3,20 +3,32 @@ const loader = document.querySelector(".post-loader");
 const checkboxContainer = document.querySelectorAll(".checkbox-span");
 const checkbox = document.querySelectorAll("#checkbox");
 
+function CheckStatus(box, index) {
+  /* Check to see is something has a status of done and display date
+  This is so the data attribute works */
+  if (box.dataset.status == "done") {
+    // Get todays date
+    let today = new Date();
+    // Note: JS Date object months start at 0 so its 0-11 so we add 1
+    let month = today.getMonth() + 1;
+    let date = `${today.getDate()}/${month}/${today.getFullYear()}`;
+    // Add the date one the clicked item
+    const listItem = checkboxContainer.item(index);
+    // I am using .item(index) because querySelectorAll returns a node list
+    listItem.innerHTML = `Completed: ${date}`;
+  }
+}
+
+// Add a date if you check the checkbox
 // Add an event listener to every checkbox
 checkboxContainer.forEach((checkbox, index) => {
+  CheckStatus(checkbox, index);
   checkbox.addEventListener("change", (e) => {
     // check if the user clicks the checkbox
     if (e.target.checked) {
-      // Get todays date
-      let today = new Date();
-      // Note: JS Date object months start at 0 so its 0-11 so we add 1
-      let month = today.getMonth() + 1;
-      let date = `${today.getDate()}/${month}/${today.getFullYear()}`;
-      // Add the date one the clicked item
       const listItem = checkboxContainer.item(index);
-      // I am using .item(index) because querySelectorAll returns a node list
-      listItem.innerHTML = `Completed: ${date}`;
+      listItem.dataset.status = "done";
+      CheckStatus(checkbox, index);
     }
   });
 });
